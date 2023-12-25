@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main id="main-id">
+        <section class="tour-section">
+            <h1 id="tour-title">Tour of dom</h1>
+            <ul>
+                <li id='li-id'>we'll discuss about dom</li>
+                <li>document object mobel</li>
+                <li>which create connection between html and js</li>
+            </ul>
+        </section>
+        <section class="document-section">
+            <h1 id="document-title">We can cusotmize just by calling</h1>
+            <ul>
+                <li class="li-class">document.get element by id</li>
+                <li class="li-class">document.get element by tag</li>
+                <li class="li-class">document.get element by className</li>
+            </ul>
+        </section>
+        <section id="manipulate-section">
+            <h1>Learn how to manipulate html by js</h1>
+            <ul id="manipulate-ul">
+                <li class="dom">dom 01</li>
+                <li class="dom">dom 02</li>
+                <li class="dom">dom 03</li>
+                <li class="dom">dom 04</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/file.js"></script>
+    <script>
+        // console.log('adding js from inside the html file.');
+
+        let tourList = document.getElementById('tour-title');
+        tourList.innerText = 'Tour List changed by js';
+        // console.log(tourList);
+
+        let liCollection = document.getElementsByTagName('li');
+        for (const li of liCollection) {
+            // console.log(li.innerText);
+        }
+
+        let h1Collection = document.getElementsByTagName('h1');
+        for (const h1 of h1Collection) {
+            // console.log(h1.innerHTML);
+        }
+
+        let domCollection = document.getElementsByClassName('dom');
+        for (const dom of domCollection) {
+            // console.log(dom.innerText);
+        }
+
+
+    </script>
+    <!-- <script src="js/dom-manipulation.js"></script> -->
+    <script src="js/append.js"></script>
+    <script src="js/style-js.js"></script>
+    <script src="js/childNode.js"></script>
+</body>
+
+</html>
